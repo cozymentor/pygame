@@ -1,0 +1,37 @@
+import random
+
+# Game Settings
+SCREEN_WIDTH = 800
+SCREEN_HEIGHT = 600
+CAPTION = "Some Platformer"
+FPS = 60
+
+# Physics Settings
+GRAVITY = 0.5
+JUMP_STRENGTH = -15
+GROUND_FRICTION = 0.2
+
+# Colors
+BLACK = (0,0,0)
+RED = (255,0,0)
+BLUE = (0,0,255)
+WHITE = (255,255,255)
+
+# Player Settings
+PLAYER_WIDTH = 50
+PLAYER_HEIGHT = 50
+PLAYER_X = SCREEN_WIDTH // 2 - PLAYER_WIDTH // 2
+PLAYER_Y = SCREEN_HEIGHT //2 - PLAYER_HEIGHT // 2
+PLAYER_SPEED = 0.9
+BULLET_SPEED = 10
+
+# Enemy Settings
+ENEMY_WIDTH = 50
+ENEMY_HEIGHT = 50
+ENEMY_X = random.randint(0, SCREEN_WIDTH - ENEMY_WIDTH)
+ENEMY_Y = 0
+ENEMY_SPEED = 5
+
+# Level Settings
+
+TILE_SIZE = 16
