@@ -32,19 +32,19 @@ class Level_One():
 
     def get_tile(self, char, sheet, tile_size, new_width, new_height):
         if char == "Z":
-            return rock1(sheet, tile_size, new_width, new_height)
+            return rock1(sheet,0,0, tile_size, new_width, new_height)
 
         if char == "X":
-            return rock2(sheet, tile_size, new_width, new_height)
+            return rock2(sheet,0,0, tile_size, new_width, new_height)
 
         if char == "C":
-            return rock3(sheet, tile_size, new_width, new_height)
+            return rock3(sheet,0,0, tile_size, new_width, new_height)
 
         if char == "V":
-            return rock4(sheet, tile_size, new_width, new_height)
+            return rock4(sheet,0,0, tile_size, new_width, new_height)
 
         if char == "G":
-            return grass(sheet, tile_size, new_width, new_height)
+            return grass(sheet,0,0, tile_size, new_width, new_height)
 
 
 
@@ -54,51 +54,51 @@ class Level_One():
 
 
 class grass(pygame.sprite.Sprite):
-    def __init__(self,sheet, tile_size, new_width, new_height):
+    def __init__(self,sheet,x,y, tile_size, new_width, new_height):
         super().__init__()
         self.x = 6
         self.y = 0
         self.image = pygame.Surface((new_width, new_height))
         self.image = sheet.subsurface(pygame.Rect(self.x*tile_size, self.y * tile_size, tile_size, tile_size))
-        self.rect = self.image.get_rect()
+        self.rect = pygame.Rect(x,y, new_width, new_height)
         self.image = pygame.transform.scale(self.image, (new_width, new_height))
 
 class rock1(pygame.sprite.Sprite):
-    def __init__(self,sheet, tile_size, new_width, new_height):
+    def __init__(self,sheet,x,y, tile_size, new_width, new_height):
         super().__init__()
         self.x = 7
         self.y = 2
         self.image = pygame.Surface((new_width, new_height))
         self.image = sheet.subsurface(pygame.Rect(self.x*tile_size, self.y * tile_size, tile_size, tile_size))
-        self.rect = self.image.get_rect()
+        self.rect = pygame.Rect(x,y, new_width, new_height)
         self.image = pygame.transform.scale(self.image, (new_width, new_height))
 
 class rock2(pygame.sprite.Sprite):
-    def __init__(self,sheet, tile_size, new_width, new_height):
+    def __init__(self,sheet,x,y,  tile_size, new_width, new_height):
         super().__init__()
         self.x = 8
         self.y = 2
         self.image = pygame.Surface((new_width, new_height))
         self.image = sheet.subsurface(pygame.Rect(self.x*tile_size, self.y * tile_size, tile_size, tile_size))
-        self.rect = self.image.get_rect()
+        self.rect = pygame.Rect(x,y, new_width, new_height)
         self.image = pygame.transform.scale(self.image, (new_width, new_height))
 
 class rock3(pygame.sprite.Sprite):
-    def __init__(self,sheet, tile_size, new_width, new_height):
+    def __init__(self,sheet,x,y,  tile_size, new_width, new_height):
         super().__init__()
         self.x = 9
         self.y = 2
         self.image = pygame.Surface((new_width, new_height))
         self.image = sheet.subsurface(pygame.Rect(self.x*tile_size, self.y * tile_size, tile_size, tile_size))
-        self.rect = self.image.get_rect()
+        self.rect = pygame.Rect(x,y, new_width, new_height)
         self.image = pygame.transform.scale(self.image, (new_width, new_height))
 
 class rock4(pygame.sprite.Sprite):
-    def __init__(self,sheet, tile_size, new_width, new_height):
+    def __init__(self,sheet,x,y,  tile_size, new_width, new_height):
         super().__init__()
         self.x = 10
         self.y = 2
         self.image = pygame.Surface((new_width, new_height))
         self.image = sheet.subsurface(pygame.Rect(self.x*tile_size, self.y * tile_size, tile_size, tile_size))
-        self.rect = self.image.get_rect()
+        self.rect = pygame.Rect(x,y, new_width, new_height)
         self.image = pygame.transform.scale(self.image, (new_width, new_height))
